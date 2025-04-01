@@ -23,4 +23,4 @@ jobs:
           git config --global user.email "mandava197@gmail.com"
           git add extracted_files
           git commit -m "Unzipped aws-cicd.zip"
-          git push
+          git push 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
