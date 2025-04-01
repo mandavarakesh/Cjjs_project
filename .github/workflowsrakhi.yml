@@ -1,0 +1,26 @@
+name: Unzip File in GitHub
+
+on: 
+  push:
+    branches:
+      - main  # Change this if you're using another branch
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Unzip File
+        run: |
+          unzip aws-cicd.zip -d extracted_files  # Change myfile.zip to your actual zip file
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "rakeshmandava"
+          git config --global user.email "mandava197@gmail.com"
+          git add extracted_files
+          git commit -m "Unzipped aws-cicd.zip"
+          git push
