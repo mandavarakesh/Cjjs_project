@@ -19,7 +19,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user."mandavarakesh"
+          git config --global user.name "mandavarakesh"
           git config --global user.email "mandava197@gmail.com"
           git add extracted_files
           git commit -m "Unzipped aws-cicd.zip"
